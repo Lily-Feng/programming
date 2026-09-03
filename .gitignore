@@ -1,0 +1,24 @@
+# Private learning plans and agent state. Never commit these paths.
+.learning/
+.private/
+PLAN.private.md
+learning-plan.md
+
+# Local secrets and editor/OS files.
+.env
+.env.*
+!.env.example
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Common generated files.
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+target/
+bin/
+out/
+build/

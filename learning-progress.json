@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "topics": {
+    "sql": {
+      "fundamentals": "not_started",
+      "exercises": "not_started",
+      "project": "not_started"
+    },
+    "python": {
+      "fundamentals": "not_started",
+      "exercises": "not_started",
+      "project": "not_started"
+    },
+    "java": {
+      "fundamentals": "not_started",
+      "exercises": "not_started",
+      "project": "not_started"
+    },
+    "go": {
+      "fundamentals": "not_started",
+      "exercises": "not_started",
+      "project": "not_started"
+    },
+    "rust": {
+      "fundamentals": "not_started",
+      "exercises": "not_started",
+      "project": "not_started"
+    }
+  }
+}

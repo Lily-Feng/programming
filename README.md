@@ -38,6 +38,7 @@ Each topic can grow independently while following a simple pattern:
 
 ## Progress
 
+<!-- learning-progress:start -->
 | Topic | Fundamentals | Exercises | Project |
 | --- | --- | --- | --- |
 | SQL | Not started | Not started | Not started |
@@ -45,6 +46,36 @@ Each topic can grow independently while following a simple pattern:
 | Java | Not started | Not started | Not started |
 | Go | Not started | Not started | Not started |
 | Rust | Not started | Not started | Not started |
+<!-- learning-progress:end -->
+
+The machine-readable source for this table is `learning-progress.json`.
+
+## Agentic workflow
+
+The detailed learning plan lives locally at `.learning/plan.md`. The entire `.learning/` directory is ignored and protected by repository checks so personal goals, dates, and reflections are never committed. Public agents should follow `AGENTS.md`.
+
+Enable the versioned Git hooks once after cloning:
+
+```sh
+git config core.hooksPath .githooks
+```
+
+To update progress as part of a commit, add an exact `Learning-Progress` trailer. For example:
+
+```sh
+git commit -m "Add Python fundamentals examples" \
+  -m "Learning-Progress: python fundamentals complete"
+```
+
+Valid topics are `sql`, `python`, `java`, `go`, and `rust`. Valid areas are `fundamentals`, `exercises`, and `project`; valid states are `not_started`, `in_progress`, `review`, and `complete`.
+
+The hooks update both progress files automatically. A `complete` update is rejected unless the commit includes a shareable example in the corresponding `notes/`, `exercises/`, or `projects/` directory. Run the same checks manually with:
+
+```sh
+python3 scripts/check_learning_repo.py
+```
+
+For recurring reminders, use the task prompt in `automation/learning-reminder.md` with a scheduled agent that can access this local checkout.
 
 ## Working conventions
 
