@@ -17,6 +17,7 @@ AREA_DIRECTORIES = {
     "exercises": "exercises",
     "project": "projects",
 }
+TOPIC_DIRECTORIES = {"java": "Java"}
 
 
 def git_files() -> list[str]:
@@ -63,7 +64,8 @@ def main() -> int:
             for area, status in areas.items():
                 if status != "complete":
                     continue
-                prefix = f"{topic}/{AREA_DIRECTORIES[area]}/"
+                topic_directory = TOPIC_DIRECTORIES.get(topic, topic)
+                prefix = f"{topic_directory}/{AREA_DIRECTORIES[area]}/"
                 evidence = [
                     path
                     for path in files

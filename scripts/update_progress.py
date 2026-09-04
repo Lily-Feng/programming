@@ -29,6 +29,7 @@ EVIDENCE_DIRECTORIES = {
     "exercises": "exercises",
     "project": "projects",
 }
+TOPIC_DIRECTORIES = {"java": "Java"}
 TRAILER_PATTERN = re.compile(
     r"^Learning-Progress:\s*"
     r"(sql|python|java|go|rust)\s+"
@@ -99,7 +100,8 @@ def tracked_files() -> list[str]:
 
 
 def require_evidence(topic: str, area: str) -> None:
-    expected_prefix = f"{topic}/{EVIDENCE_DIRECTORIES[area]}/"
+    topic_directory = TOPIC_DIRECTORIES.get(topic, topic)
+    expected_prefix = f"{topic_directory}/{EVIDENCE_DIRECTORIES[area]}/"
     evidence = [
         path
         for path in tracked_files()

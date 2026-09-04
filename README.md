@@ -22,7 +22,7 @@ This repository is a workspace for reviewing core concepts, practicing problems,
 .
 ├── sql/       # Queries, schemas, exercises, and database concepts
 ├── python/    # Language review, exercises, and projects
-├── java/      # Language review, exercises, and projects
+├── Java/      # Language review, exercises, and projects
 ├── go/        # Language review, exercises, and projects
 └── rust/      # Language review, exercises, and projects
 ```
